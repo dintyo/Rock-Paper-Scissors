@@ -112,6 +112,13 @@ body {
   background-color: var(--main-color);
 }
 
+.rock:active,
+.paper:active,
+.scissors:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.24);
+}
+
 .footer {
   flex: 1;
   background-color: var(--main-color);
@@ -139,6 +146,12 @@ body {
 
 .btn-play:hover {
   background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.btn-play:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.24);
 }
 
 .hidden {

@@ -9,6 +9,7 @@ const userPaper = document.querySelector(".paper");
 const userScissors = document.querySelector(".scissors");
 const playerMove = document.querySelector(".player-move");
 const computerMove = document.querySelector(".computer-move");
+const btnPlayAgain = document.querySelector(".btn-play");
 
 ///////////////////////////////////////
 // My Plan
@@ -72,16 +73,23 @@ const updateScore = function (result) {
       pScore++;
       console.log(pScore);
       scoreText.textContent = `You won 😃! The score is now ${pScore} - ${cScore}`;
+      if (pScore === 5) {
+        scoreText.textContent = `You won! Final score is ${pScore} - ${cScore}`;
+        btnPlayAgain.classList.remove("hidden");
+      }
       return;
     }
     if (result === "Loss") {
       cScore++;
       scoreText.textContent = `You lost 😞! The score is now ${pScore} - ${cScore}`;
+      if (cScore === 5) {
+        scoreText.textContent = `You lost! Final score is ${pScore} - ${cScore}`;
+        btnPlayAgain.classList.remove("hidden");
+      }
       return;
     }
     scoreText.textContent = `You tied! The score is now ${pScore} - ${cScore}`;
   } else {
-    // enable button to play again, freeze scores
   }
 };
 
@@ -136,4 +144,13 @@ userScissors.addEventListener("click", function () {
   printResult(playerMove, pMove);
   printResult(computerMove, cMove);
   updateScore(getWinner());
+});
+
+btnPlayAgain.addEventListener("click", function () {
+  cScore = 0;
+  pScore = 0;
+  scoreText.textContent = "";
+  playerMove.textContent = "😎";
+  computerMove.textContent = "💻";
+  btnPlayAgain.classList.add("hidden");
 });
