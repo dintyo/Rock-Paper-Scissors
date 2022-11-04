@@ -34,6 +34,8 @@ const computerMove = document.querySelector(".computer-move");
 
 let pMove;
 let cMove;
+let cScore = 0;
+let pScore = 0;
 
 // function to get computers input
 
@@ -48,16 +50,90 @@ const getComputerMove = function () {
   return cMove;
 };
 
+// function to print result
+
+const printResult = function (player, move) {
+  if (pScore < 5 || cScore < 5) {
+    if (move === "Scissors") player.textContent = "✂️";
+    if (move === "Rock") player.textContent = "🤜";
+    if (move === "Paper") player.textContent = "🗒️";
+
+    let roundResult = getWinner();
+  } else {
+    // show button to play again and reset game
+  }
+};
+
+// function to update the score
+
+const updateScore = function (result) {
+  if (pScore < 5 && cScore < 5) {
+    if (result === "Win") {
+      pScore++;
+      console.log(pScore);
+      scoreText.textContent = `You won 😃! The score is now ${pScore} - ${cScore}`;
+      return;
+    }
+    if (result === "Loss") {
+      cScore++;
+      scoreText.textContent = `You lost 😞! The score is now ${pScore} - ${cScore}`;
+      return;
+    }
+    scoreText.textContent = `You tied! The score is now ${pScore} - ${cScore}`;
+  } else {
+    // enable button to play again, freeze scores
+  }
+};
+
+// function to determine winner
+
+const getWinner = function () {
+  switch (true) {
+    case pMove === "Rock" && cMove === "Rock":
+      return "Tie";
+    case pMove === "Rock" && cMove === "Paper":
+      return "Loss";
+    case pMove === "Rock" && cMove === "Scissors":
+      return "Win";
+    case pMove === "Paper" && cMove === "Rock":
+      return "Win";
+    case pMove === "Paper" && cMove === "Paper":
+      return "Tie";
+    case pMove === "Paper" && cMove === "Scissors":
+      return "Loss";
+    case pMove === "Scissors" && cMove === "Rock":
+      return "Loss";
+    case pMove === "Scissors" && cMove === "Paper":
+      return "Win";
+    case pMove === "Scissors" && cMove === "Scissors":
+      return "Tie";
+    default:
+      return false;
+  }
+};
+
 // add event listeners for user input
 
 userRock.addEventListener("click", function () {
   pMove = "Rock";
+  getComputerMove();
+  printResult(playerMove, pMove);
+  printResult(computerMove, cMove);
+  updateScore(getWinner());
 });
 
 userPaper.addEventListener("click", function () {
   pMove = "Paper";
+  getComputerMove();
+  printResult(playerMove, pMove);
+  printResult(computerMove, cMove);
+  updateScore(getWinner());
 });
 
 userScissors.addEventListener("click", function () {
   pMove = "Scissors";
+  getComputerMove();
+  printResult(playerMove, pMove);
+  printResult(computerMove, cMove);
+  updateScore(getWinner());
 });
