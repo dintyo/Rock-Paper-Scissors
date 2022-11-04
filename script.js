@@ -47,3 +47,17 @@ const getComputerMove = function () {
 
   return cMove;
 };
+
+// add event listeners for user input
+
+userRock.addEventListener("click", function () {
+  pMove = "Rock";
+});
+
+userPaper.addEventListener("click", function () {
+  pMove = "Paper";
+});
+
+userScissors.addEventListener("click", function () {
+  pMove = "Scissors";
+});
