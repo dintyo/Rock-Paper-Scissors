@@ -37,4 +37,13 @@ let cMove;
 
 // function to get computers input
 
-const getComputerMove = function () {};
+const getComputerMove = function () {
+  const randomNum = Math.floor(Math.random() * 3 + 1);
+  if (randomNum == 1) {
+    cMove = "Rock";
+  } else if (randomNum == 2) {
+    cMove = "Paper";
+  } else cMove = "Scissors";
+
+  return cMove;
+};
