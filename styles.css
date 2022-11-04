@@ -126,6 +126,25 @@ body {
   height: 30px;
 }
 
+.btn-play {
+  background-color: var(--alt-color);
+  border: var(--main-color);
+  border-style: solid;
+  margin-top: 20px;
+  padding: 10px 30px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.btn-play:hover {
+  background-color: var(--main-color);
+}
+
+.hidden {
+  opacity: 0;
+}
+
 .github-social {
   margin-left: 10px;
   align-items: center;
