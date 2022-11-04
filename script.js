@@ -53,10 +53,10 @@ const getComputerMove = function () {
 // function to print result
 
 const printResult = function (player, move) {
-  if (pScore < 5 || cScore < 5) {
+  if (pScore < 5 && cScore < 5) {
     if (move === "Scissors") player.textContent = "✂️";
     if (move === "Rock") player.textContent = "🤜";
-    if (move === "Paper") player.textContent = "🗒️";
+    if (move === "Paper") player.textContent = "✋";
 
     let roundResult = getWinner();
   } else {
