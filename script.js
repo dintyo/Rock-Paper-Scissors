@@ -55,23 +55,23 @@ const updateScore = function (result) {
     if (result === "Win") {
       pScore++;
       console.log(pScore);
-      scoreText.textContent = `You won 😃! The score is now ${pScore} - ${cScore}`;
+      scoreText.innerHTML = `you won 😃 <br> the score is now ${pScore} - ${cScore}`;
       if (pScore === 5) {
-        scoreText.textContent = `You won!\nFinal score is ${pScore} - ${cScore}`;
+        scoreText.innerHTML = `you won 😃 <br> the final score is ${pScore} - ${cScore}`;
         btnPlayAgain.classList.remove("hidden");
       }
       return;
     }
     if (result === "Loss") {
       cScore++;
-      scoreText.textContent = `You lost 😞!\nThe score is now ${pScore} - ${cScore}`;
+      scoreText.innerHTML = `you lost 😞 <br> the score is now ${pScore} - ${cScore}`;
       if (cScore === 5) {
-        scoreText.textContent = `You lost!\nFinal score is ${pScore} - ${cScore}`;
+        scoreText.innerHTML = `you lost 😞 <br> the final score is ${pScore} - ${cScore}`;
         btnPlayAgain.classList.remove("hidden");
       }
       return;
     }
-    scoreText.textContent = `You tied!\nThe score is now ${pScore} - ${cScore}`;
+    scoreText.innerHTML = `you tied 😕 <br> the score is now ${pScore} - ${cScore}`;
   } else {
   }
 };
