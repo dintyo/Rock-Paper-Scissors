@@ -12,23 +12,6 @@ const computerMove = document.querySelector(".computer-move");
 const btnPlayAgain = document.querySelector(".btn-play");
 
 ///////////////////////////////////////
-// My Plan
-/*
-- Start with function getComputerChoice - randomly return Rock, Paper or Scissors. 
-
-- Add event listeners to buttons for users input
-
-- Set users score based on button input
-
-- Write a function to determine the winner
-
-- Log the score
-
-- Print the inputs to the screen.
-
-*/
-
-///////////////////////////////////////
 // Main code
 
 // define global variables used for playerMove and computerMove
