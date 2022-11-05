@@ -21,8 +21,9 @@ body {
   color: white;
   text-align: center;
   font-size: 125%;
-  background-color: var(--alt-color);
+  background-color: var(--main-color);
   width: 100%;
+  margin: 0;
 }
 
 .player-move,
@@ -83,6 +84,11 @@ body {
 
 .player {
   padding: 0;
+}
+
+.main-header-text {
+  padding: 0px;
+  margin: 10px 0px;
 }
 
 .player-selection {
