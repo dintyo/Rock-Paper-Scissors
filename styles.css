@@ -213,4 +213,5 @@ body {
 
 .scoreupdate {
   transform: scale(1.1);
+  text-shadow: 0 1px var(--main-color);
 }
