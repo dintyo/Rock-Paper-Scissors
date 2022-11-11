@@ -112,6 +112,7 @@ body {
   height: 75px;
   width: 75px;
   user-select: none;
+  disabled: true;
 }
 
 .rock:hover,
@@ -183,6 +184,7 @@ body {
   font-size: 20px;
   margin-top: 35px;
   text-align: center;
+  transition: all 0.2s;
   /* margin-top: 50px; */
 }
 
@@ -190,4 +192,8 @@ body {
   max-width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+.scoreupdate {
+  transform: scale(0.8);
 }
