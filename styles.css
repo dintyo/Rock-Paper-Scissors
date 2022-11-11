@@ -199,6 +199,7 @@ body {
   font-size: min(4vmin, 20px);
   margin-top: 35px;
   text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s;
   /* margin-top: 50px; */
 }
