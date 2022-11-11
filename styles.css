@@ -32,9 +32,9 @@ body {
   border: var(--main-color);
   border-style: solid;
   background-color: var(--alt-color);
-  width: 10vmin;
-  height: 10vmin;
-  font-size: 6vmin;
+  width: 13vmin;
+  height: 13vmin;
+  font-size: 8vmin;
   align-items: center;
   justify-content: center;
   margin: 20px;
@@ -62,19 +62,19 @@ body {
 }
 
 .vs-text {
-  font-size: 3vmin;
+  font-size: 5vmin;
   max-height: 100px;
 }
 
 .heading-text {
-  font-size: 3vmin;
+  font-size: 6vmin;
   margin: 0;
   padding: 0;
 }
 
 .selection-header-text {
   /* margin-top: 20px; */
-  font-size: 3vmin;
+  font-size: 6vmin;
   margin-bottom: 20px;
   margin-top: auto;
 }
@@ -94,7 +94,7 @@ body {
   justify-content: space-around;
   gap: 10px;
   margin-top: 10px;
-  width: 60vmin;
+  width: 50vmin;
   /* max-width: 400px; */
   /* max-height: 200px; */
   /* max-width: 10vw; */
@@ -109,9 +109,9 @@ body {
   border: var(--main-color);
   background-color: var(--alt-color);
   border-style: solid;
-  font-size: 5vmin;
-  height: 10vmin;
-  width: 10vmin;
+  font-size: 7vmin;
+  height: 14vmin;
+  width: 14vmin;
   user-select: none;
 }
 
@@ -151,7 +151,7 @@ body {
   padding: 10px 30px;
   color: inherit;
   font-family: inherit;
-  font-size: 3vmin;
+  font-size: 6vmin;
   margin-bottom: 50px;
 }
 
@@ -181,7 +181,7 @@ body {
 }
 
 .score {
-  font-size: 3vmin;
+  font-size: 6vmin;
   margin-top: 35px;
   text-align: center;
   transition: all 0.2s;
