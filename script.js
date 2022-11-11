@@ -93,11 +93,12 @@ const updateScore = function (result) {
     scoreText.classList.add("scoreupdate");
     if (result === "Win") {
       pScore++;
-      console.log(pScore);
-      audioWinRound.currentTime = 0;
-      audioWinRound.play();
-      scoreText.innerHTML = `you won 😃 <br> the score is now ${pScore} - ${cScore}`;
-      if (pScore === 5) {
+      if (pScore < 5) {
+        console.log(pScore);
+        audioWinRound.currentTime = 0;
+        audioWinRound.play();
+        scoreText.innerHTML = `you won 😃 <br> the score is now ${pScore} - ${cScore}`;
+      } else {
         audioWinGame.currentTime = 0;
         audioWinGame.play();
         scoreText.innerHTML = `you won 😃 <br> the final score is ${pScore} - ${cScore}`;
@@ -110,10 +111,11 @@ const updateScore = function (result) {
     }
     if (result === "Loss") {
       cScore++;
-      audioLoseRound.currentTime = 0;
-      audioLoseRound.play();
-      scoreText.innerHTML = `you lost 😞 <br> the score is now ${pScore} - ${cScore}`;
-      if (cScore === 5) {
+      if (cScore < 5) {
+        audioLoseRound.currentTime = 0;
+        audioLoseRound.play();
+        scoreText.innerHTML = `you lost 😞 <br> the score is now ${pScore} - ${cScore}`;
+      } else {
         audioLoseGame.currentTime = 0;
         audioLoseGame.play();
         scoreText.innerHTML = `you lost 😞 <br> the final score is ${pScore} - ${cScore}`;
